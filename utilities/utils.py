@@ -71,8 +71,8 @@ def stop_ec2():
 def transformation(C):
 
     # Transform the 0-1 challenge to -1 and +1.
-    V = 2 * C - 1
-    # V = np.fliplr(V)
+#     V = 2 * C - 1
+    V = np.fliplr(V)
 
     # Compute the cumulative product (right to left)
     V = np.cumprod(V, axis=1, dtype=np.int8)
